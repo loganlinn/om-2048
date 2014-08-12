@@ -1,4 +1,4 @@
-(defproject sample "0.1.0-SNAPSHOT"
+(defproject om-2048 "0.1.0-SNAPSHOT"
   :description "FIXME: write this!"
   :url "http://example.com/FIXME"
 
@@ -17,7 +17,9 @@
     :builds [{:id "dev"
               :source-paths ["src"]
               :compiler {
-                :output-to "out/main.js"
+                :output-to "out/om-2048.js"
                 :output-dir "out"
-                :optimizations :none
-                :source-map true}}]})
+                :optimizations :whitespace
+                :preamble ["react/react.js"]
+                :externs ["react/externs/react.js"]
+                }}]})
